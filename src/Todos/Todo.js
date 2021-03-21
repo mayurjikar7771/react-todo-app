@@ -1,12 +1,13 @@
 import React from 'react';
-import { Icon } from 'antd';
+import {
+    CloseOutlined 
+  } from '@ant-design/icons';
 
 const Todo = (props) => {
     return <div className="todo">
       <p>{props.title}</p>
-    
-    
-</div>
+     <CloseOutlined  />
+   </div>
 }
 
 export default Todo;
