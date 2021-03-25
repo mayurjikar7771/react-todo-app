@@ -6,5 +6,5 @@ import Login from './Login/LoginContainer';
 import './style.css';
 
 import Dashboard from './Dashboard';
-
-ReactDOM.render(<Dashboard />, document.getElementById('root'));
+import Profile from './Profile/ProfileContainer';
+ReactDOM.render(<Profile />, document.getElementById('root'));
