@@ -10,7 +10,7 @@ const Login = (props) => {
          <Col span = {6}>
           <Card>
                 <h1>Login Form</h1>
-                <Form>
+                <Form onSubmit={props.handleLogin}>
                     <Form.Item>
                         <Input 
                              type="text"
@@ -30,8 +30,7 @@ const Login = (props) => {
                         />
                     </Form.Item>
                     <Form.Item>
-                         <Button type="primary">Login
-
+                         <Button type="primary" htmlType="submit">Login
                          </Button>
                     </Form.Item>
                 </Form>

@@ -30,6 +30,12 @@ class LoginContainer extends React.Component{
             password: e.target.value
         });
     }
+
+    handleLogin = (e) => {
+        e.preventDefault();
+        console.log('form submit');
+    }
+
     render(){
          
         console.log('state',this.state);
@@ -39,6 +45,7 @@ class LoginContainer extends React.Component{
          password = {password}
          handleEmail = {this.handleEmail}
          handlePassword = {this.handlePassword}
+         handleLogin = {this.handleLogin}
         />
     }
 }

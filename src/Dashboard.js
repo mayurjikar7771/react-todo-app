@@ -6,7 +6,7 @@ import Todos from './Todos/Todos';
 
 
 const dashboard = (props) => {
-
+   console.log(props,props);
      return <Layout>
       <Todos />
      </Layout>
