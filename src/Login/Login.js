@@ -10,7 +10,7 @@ const Login = (props) => {
          <Col span = {6}>
           <Card>
                 <h1>Login Form</h1>
-                <Form onSubmit={props.handleLogin}>
+                <Form onFinish={props.handleLogin}>
                     <Form.Item>
                         <Input 
                              type="text"
@@ -22,7 +22,7 @@ const Login = (props) => {
                     </Form.Item>
                     <Form.Item>
                         <Input 
-                            type="password"
+                            type="text"
                             placeholder="Password"
                             value={props.password}
                             onChange={props.handlePassword}

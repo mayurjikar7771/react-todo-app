@@ -1,9 +1,9 @@
 const actions = {
     USER_LOGIN: 'USER_LOGIN',
-    userLogin :(playload) =>({type: actions.USER_LOGIN,playload}),
+    userLogin :(payload) =>({type: actions.USER_LOGIN,payload}),
 
     STORE_USER: 'STORE_USER',
-    storeUser : (playload) => ({type: actions.STORE_USER,playload}),
+    storeUser : (payload) => ({type: actions.STORE_USER,payload})
 
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import Todo from './../Todo';
 
-const TodoList = ( ) => {
+const TodoList = (props) => {
     return <div className="todolist">
-         <Todo title = "Learn React"/>
-         <Todo title = "Learn Javascript"/>
-         <Todo title = "Learn Node Js"/>
+         {
+             props.todos.map(todo => <Todo todo={todo} key={todo.id} completed={todo.completed} handleMarkCompleted={props.handleMarkCompleted}/>)
+         }
     </div>
 }
 

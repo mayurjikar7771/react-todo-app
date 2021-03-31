@@ -4,14 +4,18 @@ import { Input } from 'antd';
 const { Search } = Input;
 
 const NewTodo = (props) => {
-    return <Search
+    return <Input
         placeholder="Enter new task"
-        enterButton="Add"
-        size="large"
+        
+         size="large"
         value={props.todo}
-        onSearch={props.newTodo}
         onChange={props.handleOnChange}
+        
     />
+
 }
 
 export default NewTodo;
+
+//onSearch={props.newTodo}
+// enterButton="Add"

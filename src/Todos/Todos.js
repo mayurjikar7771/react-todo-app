@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NewTodo from './NewTodo/NewTodo';
-import TodoList from './TodoList/TodoList';
+import TodoList from './TodoList/TodoListContainer';
 const Todos = () => {
     
     return <div style={{

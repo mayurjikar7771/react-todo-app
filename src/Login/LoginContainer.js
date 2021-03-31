@@ -1,19 +1,33 @@
 
 import React from 'react';
+import {connect} from 'react-redux';
 import Login from './Login';
+import actions from './Action';
+import Cookies from 'js-cookie';
 
 class LoginContainer extends React.Component{
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state = {
             email:'',
             password:''
         }
 
+        if(Cookies.get('token')){
+            this.props.history.push('/dashboard');
+        }
+      
     }
 
+     componentWillUpdate() {
+
+            if(Cookies.get('token')){
+                this.props.history.push('/dashboard');
+            }
+     }
+   
      handleEmail = (e) => {
               // console.log(e.target.value);  // you check this input value in console
 
@@ -32,13 +46,13 @@ class LoginContainer extends React.Component{
     }
 
     handleLogin = (e) => {
-        e.preventDefault();
-        console.log('form submit');
+      
+
+        this.props.userLogin(this.state.email);
     }
 
     render(){
          
-        console.log('state',this.state);
         const { email, password} = this.state;
         return <Login 
          email = {email}
@@ -50,4 +64,13 @@ class LoginContainer extends React.Component{
     }
 }
 
-export default LoginContainer;
+const mapStateToProps = (state) => {
+    
+    return state;
+}
+
+const mapDispatchToProps = {
+    userLogin: actions.userLogin
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(LoginContainer);

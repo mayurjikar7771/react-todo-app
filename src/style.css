@@ -30,6 +30,7 @@
 }
 .content{
     height: 700px;
+    overflow: scroll;
 }
 .todo{
     background-color: #fff;
